@@ -1,0 +1,29 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+
+td{
+    padding: 12px;
+  }
+
+.symbol{
+    float: left;
+}
+
+tr{
+    width: max-content;
+}
+
+tr:nth-child(odd){
+    background-color: #f2f2f2;
+  }
+  
+th{
+  padding: 15px;
+    background-color: #383e42;
+    color: #fff;
+}

@@ -1,0 +1,125 @@
+<h1>Aanvraag van een ereteken</h1>
+<form #aanvraagForm = "ngForm" >
+
+  <div>PERSOONLIJKE GEGEVENS</div>
+    <label for="voornaam" >Voornaam:</label>
+    <input type="text" required name = "voornaam" [(ngModel)] = "voornaam" placeholder="..." >
+
+    <label for="achternaam">Achternaam:</label>
+    <input type="text" required name = "achternaam" [(ngModel)] = "achternaam" placeholder="..." >
+
+    <label for="rijksregisternr" >Rijksregisternummer:</label>
+    <input type="text" required pattern="[0-9]{11}" name = "rijksregisternr" [(ngModel)] = "rijksregisternr" placeholder="..."  >
+    <label for="geboortedatum">Geboortedatum:</label>
+    <input type="date" required name = "geboortedatum" [(ngModel)] = "geboortedatum" placeholder="..." value="2023/11/03">    
+    <label for="geboorteplaats">Geboorteplaats:</label>
+    <input type="text" required name = "geboorteplaats" [(ngModel)] = "geboorteplaats" placeholder="..." >
+
+    <label for="hoofdberoep">Hoofdberoep:</label>
+    <input type="text" required name = "hoofdberoep" [(ngModel)] = "hoofdberoep"placeholder="..."  >
+    <label for="functietitel">FunctieTitel:</label>
+    <input type="text" required name = "functietitel" [(ngModel)] = "functietitel"placeholder="..." >
+    <label for="graadOfRang" min="2" max="4" required >Graad of rang:</label>
+    <input type="text" name = "graadOfRang" [(ngModel)] = "graadOfRang" placeholder="..." >
+    <label for="salarisschaal" required >Salarisschaal:</label>
+    <input type="text" name = "salarisschaal" [(ngModel)] = "salarisschaal" placeholder="..." >
+    <label for="initiatiefnemer">Initiatiefnemer:</label>
+    <input type="text" required name = "initiatiefnemer" [(ngModel)] = "initiatiefnemer"placeholder="..." >
+    <label for="ontvangenOnderscheidingen">Al ontvangen onderscheidingen:</label>
+    <input type="text" name = "ontvangenOnderscheidingen" [(ngModel)] = "ontvangenOnderscheidingen"placeholder="..." >
+    <div>MOTIVATIE</div>
+
+    <label for="resuEvaluaties">Resultaat evaluaties</label>
+    <input type="text" required name = "resuEvaluaties" [(ngModel)] = "resuEvaluaties" placeholder="...">
+    <label for="sancties">Tucht- of strafsancties:</label>
+    <input type="text" required name = "sancties" [(ngModel)] = "sancties" placeholder="...">
+    <div>VOORSTEL</div>
+    <label for="voorgesEreteken">Voorgestelde ereteken:</label>
+    <input type="text" required name = "voorgesEreteken" [(ngModel)] = "voorgesEreteken" placeholder="...">
+    <label for="verslagBetrokkene" >Verslag over betrokkene:</label>
+    <input type="text" required name = "verslagBetrokkene" [(ngModel)] = "verslagBetrokkene" placeholder="...">
+
+    <nav id="gegevensLoopbaan">
+    <div>Gegevens van de loopbaan</div>
+    <nav class="inputsLoopBaan" >
+
+    <label for="van">graad:</label>
+    <input type="text"  name = "graad" [(ngModel)] = "graad[0]" placeholder="...">
+    <input type="text"  name = "graad" [(ngModel)] = "graad[1]" placeholder="...">
+    <input type="text"  name = "graad" [(ngModel)] = "graad[2]" placeholder="...">
+    <input type="text"  name = "graad" [(ngModel)] = "graad[3]" placeholder="...">
+    <input type="text"  name = "graad" [(ngModel)] = "graad[4]" placeholder="...">
+    <input type="text"  name = "graad" [(ngModel)] = "graad[5]" placeholder="...">
+    <input type="text"  name = "graad" [(ngModel)] = "graad[6]" placeholder="...">
+    <input type="text"  name = "graad" [(ngModel)] = "graad[7]" placeholder="...">
+    </nav>
+
+    <nav class="inputsLoopBaan" >
+    <label for="van">van:</label>
+
+    <input type="date" required name = "van" [(ngModel)] = "van[0]" placeholder="..." value="2023/11/03">
+    <input type="date"  name = "van" [(ngModel)] = "van[1]" placeholder="..." value="2023/11/03">
+    <input type="date"  name = "van" [(ngModel)] = "van[2]" placeholder="..." value="2023/11/03">
+    <input type="date"  name = "van" [(ngModel)] = "van[3]" placeholder="..." value="2023/11/03">
+    <input type="date"  name = "van" [(ngModel)] = "van[4]" placeholder="..." value="2023/11/03">
+    <input type="date"  name = "van" [(ngModel)] = "van[5]" placeholder="..." value="2023/11/03">
+    <input type="date"  name = "van" [(ngModel)] = "van[6]" placeholder="..." value="2023/11/03">
+    <input type="date"  name = "van" [(ngModel)] = "van[7]" placeholder="..." value="2023/11/03">
+    </nav>
+    
+    <nav class="inputsLoopBaan" >
+    <label for="tot">tot en met:</label>
+
+    <input type="date" required name = "tot" [(ngModel)] = "tot[0]" placeholder="..." value="2023/11/03">
+    <input type="date"  name = "tot" [(ngModel)] = "tot[1]" placeholder="..." value="2023/11/03">
+    <input type="date"  name = "tot" [(ngModel)] = "tot[2]" placeholder="..." value="2023/11/03">
+    <input type="date"  name = "tot" [(ngModel)] = "tot[3]" placeholder="..." value="2023/11/03">
+    <input type="date"  name = "tot" [(ngModel)] = "tot[4]" placeholder="..." value="2023/11/03">
+    <input type="date"  name = "tot" [(ngModel)] = "tot[5]" placeholder="..." value="2023/11/03">
+    <input type="date"  name = "tot" [(ngModel)] = "tot[6]" placeholder="..." value="2023/11/03">
+    <input type="date"  name = "tot" [(ngModel)] = "tot[7]" placeholder="..." value="2023/11/03">
+    </nav>
+
+
+    <nav class="inputsLoopBaan" >
+    <label for="prestatiebreuk">prestatiebreuk:</label>
+
+    <input type="text" required name = "prestatiebreuk" [(ngModel)] = "prestatiebreuk[0]" placeholder="...">
+    <input type="text"  name = "prestatiebreuk" [(ngModel)] = "prestatiebreuk[1]" placeholder="...">
+    <input type="text"  name = "prestatiebreuk" [(ngModel)] = "prestatiebreuk[2]" placeholder="...">
+    <input type="text"  name = "prestatiebreuk" [(ngModel)] = "prestatiebreuk[3]" placeholder="...">
+    <input type="text"  name = "prestatiebreuk" [(ngModel)] = "prestatiebreuk[4]" placeholder="...">
+    <input type="text"  name = "prestatiebreuk" [(ngModel)] = "prestatiebreuk[5]" placeholder="...">
+    <input type="text"  name = "prestatiebreuk" [(ngModel)] = "prestatiebreuk[6]" placeholder="...">
+    <input type="text"  name = "prestatiebreuk" [(ngModel)] = "prestatiebreuk[7]" placeholder="...">
+    </nav >
+
+    <nav class="inputsLoopBaan" >
+    <label for="aardPrestaties">aard prestaties:  </label>
+
+    <input type="text" required name = "aardPrestaties" [(ngModel)] = "aardPrestaties[0]" placeholder="...">
+    <input type="text"  name = "aardPrestaties" [(ngModel)] = "aardPrestaties[1]" placeholder="...">
+    <input type="text"  name = "aardPrestaties" [(ngModel)] = "aardPrestaties[2]" placeholder="...">
+    <input type="text"  name = "aardPrestaties" [(ngModel)] = "aardPrestaties[3]" placeholder="...">
+    <input type="text"  name = "aardPrestaties" [(ngModel)] = "aardPrestaties[4]" placeholder="...">
+    <input type="text" required name = "aardPrestaties" [(ngModel)] = "aardPrestaties[5]" placeholder="...">
+    <input type="text"  name = "aardPrestaties" [(ngModel)] = "aardPrestaties[6]" placeholder="...">
+    <input type="text"  name = "aardPrestaties" [(ngModel)] = "aardPrestaties[7]" placeholder="...">
+    </nav>
+  </nav>
+  <label for="dienst" required >31.12.{{currentPeriod.getFullYear()}} jaar dienst op:</label>
+  <input type="number" required name = "dienstJaren" [(ngModel)] = "dienstJaren"placeholder="..." >
+  <label for="dienstJaren" >jaar</label>
+  <input type="number" required name = "dienstMaanden" [(ngModel)] = "dienstMaanden"placeholder="..." >
+  <label for="dienstMaanden" >maanden</label>
+
+</form>
+
+<button (click)='AddAanvraag()' #sendButton [disabled]="aanvraagForm.invalid" id="sendButton">Verzenden</button>
+<nav class="container">
+<nav class="popup" #myPopup>
+  <h2>Danku wel!</h2>
+  <p>De ereteken werd succesvol aangevraag.</p>
+<button type="button" (click)="closePopUp()">Voltooid</button>
+  </nav>
+</nav>

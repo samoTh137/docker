@@ -1,0 +1,426 @@
+<h1>Controle</h1>
+
+<table class="main-table">
+    <tr class="flex-container">
+        <!--first row-->
+        <div>
+            <table id="personal-details">
+                <caption>Persoonlijke gegevens</caption>
+                <tr>
+                    <td>Voornaam</td>
+                    <td>
+                        <span id="firstname"> {{applicationToShow.voornaam}} </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Achternaam</td>
+                    <td>
+                        <span id="lastname"> {{applicationToShow.achternaam}} </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geboorteplaats</td>
+                    <td>
+                        <span id="birthplace"> {{applicationToShow.geboorteplaats} </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geboortedatum</td>
+                    <td>
+                        <span id="birthdate"> {{applicationToShow.geboortedatum}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rijksregister nummer</td>
+                    <td>
+                        <span id="registration"> {{applicationToShow.rijksregisternummer}} </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hoofdberoep</td>
+                    <td>
+                        <span id="profession"> {{applicationToShow.hoofdBeroep}} </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Functietitel bij overdracht</td>
+                    <td>
+                        <span id="function"> {{applicationToShow.functieTitel}} </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Graad/rang</td>
+                    <td>
+                        <span id="rank"> {{applicationToShow.graadOfRang}} </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Salarisschaal</td>
+                    <td>
+                        <span id="payscale"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Al ontvangen onderscheidingen</td>
+                    <td>
+                        <span id="awards"> {{applicationToShow.alOntvangenOnderscheidingen}} </span>
+                    </td>
+                </tr>
+            </table> <br>
+            
+           
+        </div>  
+        
+        <div>
+            <table>
+               <caption>Gegevens van de loopbaan</caption>
+                <tr>
+                    <th>Graad</th>
+                    <th>Van</th>
+                    <th>Tot en met</th>
+                    <th>Prestatiebreuk</th>
+                    <th>Aard prestaties</th>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="rank-career"></span>
+                    </td>
+                    <td>
+                        <span id="start-career"></span>
+                    </td>
+                    <td>
+                        <span id="end-career"></span>
+                    </td>
+                    <td>
+                        <span id="performancebreach-career"></span>
+                    </td>
+                    <td>
+                        <span id="performancenature-career"></span>
+                    </td>
+                </tr>
+            </table>
+    
+            <table>
+                <tr>
+                    
+                    <td>Totaal aantal jaren dienst op 31/12</td>
+                    <td>
+                        <span id="serviceyears"> {{applicationToShow.totJarenDienst}}</span>
+                    </td>
+                    <td>jaar</td>
+                    <td>
+                        <span id="servicemonths"></span>
+                    </td>
+                    <td>maanden</td>
+                    
+                </tr>
+            </table><br>
+    
+           
+        </div>
+    </tr>
+
+    <div>
+    <tr>
+
+      <table>
+        <caption>
+          Gegevens van de loopbaan
+        </caption>
+        <tr>
+          <th>Graad</th>
+          <th>Van</th>
+          <th>Tot en met</th>
+          <th>Prestatiebreuk</th>
+          <th>Aard prestaties</th>
+        </tr>
+        <tr>
+          <td>
+            <span id="rank-career"></span>
+          </td>
+          <td>
+            <span id="start-career"></span>
+          </td>
+          <td>
+            <span id="end-career"></span>
+          </td>
+          <td>
+            <span id="performancebreach-career"></span>
+          </td>
+          <td>
+            <span id="performancenature-career"></span>
+          </td>
+        </tr>
+      </table>
+      <div>
+            <table>
+                <tr>
+                    <td>25/35 jaar dienst op</td>
+                    <td>
+                        <span id="servicedate"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgesteld ereteken</td>
+                    <td>
+                        <span id="proposed">{{applicationToShow.voorgesteldeEreteken}}</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table>
+                <caption>Motivatie</caption>
+                <tr>
+                    <td>
+                        Resultaat laatste evaluatie
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="evaluationresult">{{applicationToShow}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Tucht- of strafsanties
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="sanctions"> {{applicationToShow.tuchtOfStrafsacties}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        kort verslag over het functioneren van de betrokkene
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="functionalreport"> {{applicationToShow.verslagBetrokkene}}</span>
+                    </td>
+                </tr>
+    
+            </table>
+        </div>
+    </tr>
+    
+    <tr>
+        <div id="text">Adviezen gemeente: </div>
+    </tr>
+
+  <tr class="flex-container">
+    <!--second row-->
+    <div>
+      <table id="proposal">
+        <caption>
+          Voorstel
+        </caption>
+
+        <tr>
+          <td>25/35 jaar dienst op</td>
+          <td>
+            <span id="servicedate"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Voorgesteld ereteken</td>
+          <td>
+            <span id="proposed"></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <table>
+        <caption>
+          Motivatie
+        </caption>
+        <tr>
+          <td>Resultaat laatste evaluatie</td>
+        </tr>
+        <tr>
+          <td>
+            <span id="evaluationresult"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Tucht- of strafsanties</td>
+        </tr>
+        <tr>
+          <td>
+            <span id="sanctions"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>kort verslag over het functioneren van de betrokkene</td>
+        </tr>
+        <tr>
+          <td>
+            <span id="functionalreport"></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </tr>
+
+  <tr>
+    <div id="text">Adviezen gemeente:</div>
+  </tr>
+
+  <tr class="flex-container">
+    <!--third row-->
+    <div>
+      <table>
+        <caption>
+          Gemeente
+        </caption>
+
+        <tr>
+          <td>Algemeen directeur of zijn gemachtigde</td>
+          <td>
+            <span id="director"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>burgemeester</td>
+          <td>
+            <span id="mayor"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Provinciegouverneur</td>
+          <td>
+            <span id="governor"></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <table>
+        <caption>
+          OCMW
+        </caption>
+
+        <tr>
+          <td>Voorzitter vast bureau</td>
+          <td>
+            <span id="chairman-ocmw"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>burgemeester</td>
+          <td>
+            <span id="mayor-ocmw"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Algemeen directeur of zijn gemachtigde</td>
+          <td>
+            <span id="director-ocmw"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Provinciegouverneur</td>
+          <td>
+            <span id="governor-ocmw"></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </tr>
+  <tr class="flex-container">
+    <!--fourth row-->
+    <div>
+      <table>
+        <caption>
+          Intercommunales
+        </caption>
+        
+        <tr>
+          <td>Voorzitter</td>
+          <td>
+            <span id="chairman-intercommunales"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>burgemeester</td>
+          <td>
+            <span id="mayor-intercommunales"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Provinciegouverneur</td>
+          <td>
+            <span id="governor-intercommunales"></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <table>
+        <caption>
+          provincie
+        </caption>
+        <tr>
+          <td>Provinciegriffier</td>
+          <td>
+            <span id="registrar-province"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Provinciegouverneur</td>
+          <td>
+            <span id="governor-provence"></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </tr>
+  <tr class="flex-container">
+    <!--fifth row-->
+
+    <div>
+      <table>
+        <caption>
+          Eredienstinstellingen
+        </caption>  
+                <tr>
+                    <td>Voorzitter</td>
+                    <td>
+                        <span id="chairman-institution"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Secretaris</td>
+                    <td>
+                        <span id="secretary-institution"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Provinciegouverneur of burgemeester</td>
+                    <td>
+                        <span id="governor-institution"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table>
+                <caption>Uittreksel strafregister:</caption>
+                <tr>
+                    <a id="criminal-record" href={{this.criminalrecord}}>bekijken</a>
+                </tr>
+                <tr>
+                    <input type="checkbox" id="data-checked" [(ngModel)]="dataChecked" >
+                    <label for="data-checked">Bovenstaande gegevens zijn correct en volledig</label>
+                </tr>
+                <tr>
+                    <br>
+                    <input [disabled]="!dataChecked" type="submit" id="submit-button" value="ACCEPTEREN" (click)="acceptApplication()">
+                    <input [disabled]="!dataChecked" type="submit" id="submit-button" value="WEIGEREN" (click)="denyApplication()">
+                    <input [disabled]="!dataChecked" type="submit" id="submit-button" value="aanvraag doorsturen">
+                </tr>
+            </table>        
+

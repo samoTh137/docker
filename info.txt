@@ -1,0 +1,1 @@
+run met: docker-compose up

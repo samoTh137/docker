@@ -1,0 +1,43 @@
+.flex-container {
+    display: flex;
+  
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    text-align: center;
+  }
+
+#text {
+    text-align: center;
+}
+
+caption {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+td {
+    text-align: left;
+    padding: 5px;
+}
+
+tr {
+    padding: 10px;
+}
+
+.main-table {
+    
+    border: 4px solid black;
+    margin: 0 auto;
+}
+table.main-table > tr
+ {
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+}
+
+div {
+    min-width: 300px;
+}
