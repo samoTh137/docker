@@ -20,5 +20,12 @@ services:
     volumes:
       - db_data:/var/lib/mysql
 
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
 volumes:
   db_data:
