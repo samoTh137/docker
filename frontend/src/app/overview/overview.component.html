@@ -12,6 +12,7 @@
       <th>Datum</th>
       <th>Actie</th>
     </tr>
+
         <!-- Vanaf hier alles aanmaken met een ngFor*-->
         <tr *ngFor="let application of DB.applications">
             <td>{{application.id}}</td>
@@ -20,12 +21,13 @@
             <td>{{application.initiatiefnemer}}</td>
             <td>
                 <span class="material-symbols-outlined symbol">edit_note</span>
-                <a href=""> Afwerken </a> <br>
-                <a *ngIf="application.status == 'wachten op goedkeuring'" [routerLink]="['/review', application.id]"> Bekijken </a>
+                <a [routerLink]="['/view', application.id]"> Bekijken </a>
+                <br>
+                <a *ngIf="application.status == 'wachten op goedkeuring'" [routerLink]="['/review', application.id]">Goedkeuren </a>
                 <a *ngIf="application.status == 'Advies'" [routerLink]="['/advice', application.id]">Advies geven</a>
                 <a *ngIf="application.status == 'Besluit'" [routerLink]="['/decision', application.id]">Besluit geven</a>
             </td>
         </tr>
+
     </tbody>
 </table>
-
