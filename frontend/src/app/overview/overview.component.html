@@ -12,13 +12,17 @@
       <th>Datum</th>
       <th>Actie</th>
     </tr>
+<<<<<<< Updated upstream
 
         <!-- Vanaf hier alles aanmaken met een ngFor*-->
+=======
+>>>>>>> Stashed changes
         <tr *ngFor="let application of DB.applications">
+          <ng-container *ngIf="application.status !== 'klaar'">
             <td>{{application.id}}</td>
             <td>{{application.status}}</td>
-            <td>{{application.voornaam! + application.achternaam!}}</td>
-            <td>{{application.initiatiefnemer}}</td>
+            <td>{{application.firstname + " " + application.lastname}}</td>
+            <td>{{application.birthplace}}</td>
             <td>
                 <span class="material-symbols-outlined symbol">edit_note</span>
                 <a [routerLink]="['/view', application.id]"> Bekijken </a>
@@ -26,7 +30,10 @@
                 <a *ngIf="application.status == 'wachten op goedkeuring'" [routerLink]="['/review', application.id]">Goedkeuren </a>
                 <a *ngIf="application.status == 'Advies'" [routerLink]="['/advice', application.id]">Advies geven</a>
                 <a *ngIf="application.status == 'Besluit'" [routerLink]="['/decision', application.id]">Besluit geven</a>
+                <a *ngIf="application.status == 'Besluit vertalen'" [routerLink]="['/translation', application.id]">Besluit vertalen</a>
+                <a *ngIf="application.status == 'Oorkonde opmaken'" [routerLink]="['/oorkonde', application.id]">Oorkonde opstellen</a>
             </td>
+          </ng-container>
         </tr>
 
     </tbody>

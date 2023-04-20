@@ -11,7 +11,7 @@ COPY target/backend-spring-0.0.1-SNAPSHOT.jar .
 EXPOSE 8080
 
 # Set the database connection properties as environment variables
-ENV SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/db_aanvragen
+ENV SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/db_badge_of_honour
 ENV SPRING_DATASOURCE_USERNAME=root
 ENV SPRING_DATASOURCE_PASSWORD=groep-8
 

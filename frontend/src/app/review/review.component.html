@@ -1,3 +1,4 @@
+<button routerLink="/home" class="button-primary">Back</button>
 <h1>Controle</h1>
 
 <table class="main-table">
@@ -9,61 +10,61 @@
                 <tr>
                     <td>Voornaam</td>
                     <td>
-                        <span id="firstname"> {{applicationToShow.voornaam}} </span>
+                        <span id="firstname"> {{applicationToShow.firstname}} </span>
                     </td>
                 </tr>
                 <tr>
                     <td>Achternaam</td>
                     <td>
-                        <span id="lastname"> {{applicationToShow.achternaam}} </span>
+                        <span id="lastname"> {{applicationToShow.lastname}} </span>
                     </td>
                 </tr>
                 <tr>
                     <td>Geboorteplaats</td>
                     <td>
-                        <span id="birthplace"> {{applicationToShow.geboorteplaats} </span>
+                        <span id="birthplace"> {{applicationToShow.birthplace}} </span>
                     </td>
                 </tr>
                 <tr>
                     <td>Geboortedatum</td>
                     <td>
-                        <span id="birthdate"> {{applicationToShow.geboortedatum}}</span>
+                        <span id="birthdate"> {{applicationToShow.birthdate}}</span>
                     </td>
                 </tr>
                 <tr>
                     <td>Rijksregister nummer</td>
                     <td>
-                        <span id="registration"> {{applicationToShow.rijksregisternummer}} </span>
+                        <span id="registration"> {{applicationToShow.nationalRegisterNr}} </span>
                     </td>
                 </tr>
                 <tr>
                     <td>Hoofdberoep</td>
                     <td>
-                        <span id="profession"> {{applicationToShow.hoofdBeroep}} </span>
+                        <span id="profession"> {{applicationToShow.mainProfession}} </span>
                     </td>
                 </tr>
                 <tr>
                     <td>Functietitel bij overdracht</td>
                     <td>
-                        <span id="function"> {{applicationToShow.functieTitel}} </span>
+                        <span id="function"> {{applicationToShow.jobTitle}} </span>
                     </td>
                 </tr>
                 <tr>
                     <td>Graad/rang</td>
                     <td>
-                        <span id="rank"> {{applicationToShow.graadOfRang}} </span>
+                        <span id="rank"> {{applicationToShow.gradeOrRank}} </span>
                     </td>
                 </tr>
                 <tr>
                     <td>Salarisschaal</td>
                     <td>
-                        <span id="payscale"></span>
+                        <span id="payscale">{{applicationToShow.salaryScale}}</span>
                     </td>
                 </tr>
                 <tr>
                     <td>Al ontvangen onderscheidingen</td>
                     <td>
-                        <span id="awards"> {{applicationToShow.alOntvangenOnderscheidingen}} </span>
+                        <span id="awards"> {{applicationToShow.distinctionsReceived}} </span>
                     </td>
                 </tr>
             </table> <br>
@@ -83,19 +84,19 @@
                 </tr>
                 <tr>
                     <td>
-                        <span id="rank-career"></span>
+                        <span id="rank-career">{{applicationLoopbaan.grade}}</span>
                     </td>
                     <td>
-                        <span id="start-career"></span>
+                        <span id="start-career">{{applicationLoopbaan.fromDate}}</span>
                     </td>
                     <td>
-                        <span id="end-career"></span>
+                        <span id="end-career">{{applicationLoopbaan.toDate}}</span>
                     </td>
                     <td>
-                        <span id="performancebreach-career"></span>
+                        <span id="performancebreach-career">{{applicationLoopbaan.performanceBreach}}</span>
                     </td>
                     <td>
-                        <span id="performancenature-career"></span>
+                        <span id="performancenature-career">{{applicationLoopbaan.naturePerformances}}</span>
                     </td>
                 </tr>
             </table>
@@ -105,11 +106,11 @@
                     
                     <td>Totaal aantal jaren dienst op 31/12</td>
                     <td>
-                        <span id="serviceyears"> {{applicationToShow.totJarenDienst}}</span>
+                        <span id="serviceyears"> {{applicationToShow.totYearService}}</span>
                     </td>
                     <td>jaar</td>
                     <td>
-                        <span id="servicemonths"></span>
+                        <span id="servicemonths"> {{applicationToShow.totMonthService}}</span>
                     </td>
                     <td>maanden</td>
                     
@@ -119,39 +120,6 @@
            
         </div>
     </tr>
-
-    <div>
-    <tr>
-
-      <table>
-        <caption>
-          Gegevens van de loopbaan
-        </caption>
-        <tr>
-          <th>Graad</th>
-          <th>Van</th>
-          <th>Tot en met</th>
-          <th>Prestatiebreuk</th>
-          <th>Aard prestaties</th>
-        </tr>
-        <tr>
-          <td>
-            <span id="rank-career"></span>
-          </td>
-          <td>
-            <span id="start-career"></span>
-          </td>
-          <td>
-            <span id="end-career"></span>
-          </td>
-          <td>
-            <span id="performancebreach-career"></span>
-          </td>
-          <td>
-            <span id="performancenature-career"></span>
-          </td>
-        </tr>
-      </table>
       <div>
             <table>
                 <tr>
@@ -163,7 +131,7 @@
                 <tr>
                     <td>Voorgesteld ereteken</td>
                     <td>
-                        <span id="proposed">{{applicationToShow.voorgesteldeEreteken}}</span>
+                        <span id="proposed">{{applicationToShow.proposedHonoraryDistinction}}</span>
                     </td>
                 </tr>
             </table>
@@ -178,7 +146,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <span id="evaluationresult">{{applicationToShow}}</span>
+                        <span id="evaluationresult">{{applicationToShow.resultEvaluation}}</span>
                     </td>
                 </tr>
                 <tr>
@@ -188,7 +156,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <span id="sanctions"> {{applicationToShow.tuchtOfStrafsacties}}</span>
+                        <span id="sanctions"> {{applicationToShow.sanctions}}</span>
                     </td>
                 </tr>
                 <tr>
@@ -198,13 +166,12 @@
                 </tr>
                 <tr>
                     <td>
-                        <span id="functionalreport"> {{applicationToShow.verslagBetrokkene}}</span>
+                        <span id="functionalreport"> {{applicationToShow.reportAboutInvolved}}</span>
                     </td>
                 </tr>
     
             </table>
         </div>
-    </tr>
     
     <tr>
         <div id="text">Adviezen gemeente: </div>
@@ -227,7 +194,7 @@
         <tr>
           <td>Voorgesteld ereteken</td>
           <td>
-            <span id="proposed"></span>
+            <span id="proposed">{{applicationToShow.proposedHonoraryDistinction}}</span>
           </td>
         </tr>
       </table>
@@ -242,7 +209,7 @@
         </tr>
         <tr>
           <td>
-            <span id="evaluationresult"></span>
+            <span id="evaluationresult">{{applicationToShow.resultEvaluation}}</span>
           </td>
         </tr>
         <tr>
@@ -250,7 +217,7 @@
         </tr>
         <tr>
           <td>
-            <span id="sanctions"></span>
+            <span id="sanctions">{{applicationToShow.sanctions}</span>
           </td>
         </tr>
         <tr>
@@ -385,8 +352,9 @@
       <table>
         <caption>
           Eredienstinstellingen
-        </caption>  
-                <tr>
+        </caption>
+        
+         <tr>
                     <td>Voorzitter</td>
                     <td>
                         <span id="chairman-institution"></span>
@@ -410,7 +378,7 @@
             <table>
                 <caption>Uittreksel strafregister:</caption>
                 <tr>
-                    <a id="criminal-record" href={{this.criminalrecord}}>bekijken</a>
+                    <a id="criminal-record" href="localhost:4200/">bekijken</a>
                 </tr>
                 <tr>
                     <input type="checkbox" id="data-checked" [(ngModel)]="dataChecked" >
@@ -423,4 +391,3 @@
                     <input [disabled]="!dataChecked" type="submit" id="submit-button" value="aanvraag doorsturen">
                 </tr>
             </table>        
-

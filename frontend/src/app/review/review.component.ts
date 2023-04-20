@@ -1,8 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { DbService } from '../db-service';
 import { Subject } from 'rxjs';
+import { Application } from '../application.model';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IAanvraag } from '../entities/Aanvraag'
+import { IApplication } from '../entities/Application'
+import { ICareer } from '../entities/Career';
 
 
 @Component({
@@ -12,17 +14,17 @@ import { IAanvraag } from '../entities/Aanvraag'
 })
 
 export class ReviewComponent implements OnInit, OnDestroy {
-  applications: IAanvraag[] = [];
-  applicationToShow!: IAanvraag;
+  applications: IApplication[] = [];
+  applicationToShow: IApplication;
+  applicationLoopbaan: ICareer;
   destroy$: Subject<boolean> = new Subject<boolean>();
   applicationID: number = 0;
-  criminalrecord: string = '';
   dataChecked: boolean;
-
 
 
   constructor(public dbService :DbService, private route:ActivatedRoute, private router:Router) { 
     this.dbService.getApplications().subscribe(data => this.applications = data);
+
   }
 
   acceptApplication(){
@@ -44,12 +46,17 @@ export class ReviewComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.applicationID = this.route.snapshot.params['id'];
+
+
     this.dbService.getApplication(this.applicationID).subscribe(data => {
       this.applicationToShow = data;
-      if(this.applicationToShow.rijksregisternummer != null)
-      
-      this.criminalrecord = "http://projectvm27.p.bletchley.cloud:10079/criminal-record/" + this.applicationToShow.rijksregisternummer;
     });
+
+    this.dbService.getApplicationLoopbaan(this.applicationID).subscribe(data => {
+      this.applicationLoopbaan = data;
+
+    });
+
     }
 
     goBack(){

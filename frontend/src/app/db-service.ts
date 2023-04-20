@@ -3,7 +3,8 @@ import { Application } from './application.model';
 
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
-import { IAanvraag } from './entities/Aanvraag';
+import { IApplication } from './entities/Application';
+import { ICareer } from './entities/Career';
 
 @Injectable({
   providedIn: 'root'
@@ -12,21 +13,25 @@ export class DbService {
 
   constructor(private http: HttpClient) { }
 
-  public applications: IAanvraag[] = [];
+  public applications: IApplication[] = [];
 
   getApplications() {
-    return this.http.get<IAanvraag[]>("http://localhost:8080/aanvragen").pipe(
-      map((res: IAanvraag[]) => {
+    return this.http.get<IApplication[]>("http://projectvm8.p.bletchley.cloud:10056/application").pipe(
+      map((res: IApplication[]) => {
         return res;
       })
     );
   }
 
   getApplication(id:number){
-    return this.http.get<IAanvraag>("http://localhost:8080/aanvragen/"+ id);
+    return this.http.get<IApplication>("http://projectvm8.p.bletchley.cloud:10056/application/"+ id);
   }
 
-  updateApplication(id:number, application:IAanvraag){
-    return this.http.put<IAanvraag>("http://localhost:8080/aanvragen/"+id, application);
+  updateApplication(id:number, application:IApplication){
+    return this.http.put<IApplication>("http://projectvm8.p.bletchley.cloud:10056/application/"+id, application);
+  }
+
+  getApplicationLoopbaan(id:number){
+    return this.http.get<ICareer>("http://projectvm8.p.bletchley.cloud:10056/application/career/" + id);
   }
 }

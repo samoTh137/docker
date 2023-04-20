@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientModule} from '@angular/common/http'
-import { AanvraagFormulierComponent } from './aanvraagFormulier.component';
+import { ApplicationFormComponent } from './applicationForm.component';
 import { FormsModule } from '@angular/forms';
 
 describe('AanvraagFormulierComponent', () => {
-  let component: AanvraagFormulierComponent;
-  let fixture: ComponentFixture<AanvraagFormulierComponent>;
+  let component: ApplicationFormComponent;
+  let fixture: ComponentFixture<ApplicationFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AanvraagFormulierComponent ],
+      declarations: [ ApplicationFormComponent ],
       imports : [HttpClientModule, FormsModule]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AanvraagFormulierComponent);
+    fixture = TestBed.createComponent(ApplicationFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

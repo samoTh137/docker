@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterEvent, RouterLink, RouterOutlet } from '@angular/router';
 import { Application } from '../application.model';
 import { DbService } from '../db-service';
-import { IAanvraag } from '../entities/Aanvraag';
+import { IApplication } from '../entities/Application';
 
 @Component({
   selector: 'app-advice',
@@ -13,7 +13,7 @@ import { IAanvraag } from '../entities/Aanvraag';
 export class AdviceComponent implements OnInit {
   advice!: string;
   applicationID:number = 0;
-  applicationToShow!: IAanvraag;
+  applicationToShow!: IApplication;
 
   constructor(private DB:DbService, private route:ActivatedRoute, private router:Router) { }
 
@@ -25,11 +25,10 @@ export class AdviceComponent implements OnInit {
     }
 
   postAdvice(advice:string) {
-    //TODO Updaten naar juiste veld wanneer dat in de database bestaat
-    this.applicationToShow.verslagBetrokkene = advice;
+    this.applicationToShow.advice = advice;
     //TODO Status updaten naar iets anders 
     this.applicationToShow.status = "Besluit"
-    this.DB.updateApplication(this.applicationToShow.id!,this.applicationToShow)
+    this.DB.updateApplication(this.applicationID,this.applicationToShow)
       .subscribe(() => this.goBack());
   }
 

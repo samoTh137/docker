@@ -4,13 +4,14 @@ import { DbService } from '../db-service';
 import { IApplication } from '../entities/Application';
 
 @Component({
-  selector: 'app-decision',
-  templateUrl: './decision.component.html',
-  styleUrls: ['./decision.component.css']
+  selector: 'app-translation',
+  templateUrl: './translation.component.html',
+  styleUrls: ['./translation.component.css']
 })
-export class DecisionComponent implements OnInit {
+export class TranslationComponent implements OnInit {
 
-  decision: string;
+  decision!: string;
+  translation!: string;
   applicationID:number = 0;
   applicationToShow!: IApplication;
 
@@ -23,11 +24,10 @@ export class DecisionComponent implements OnInit {
     });
     }
 
-  postDecision(decision:string) {
-    this.applicationToShow.decision = decision;
-    this.applicationToShow.status = "Besluit vertalen"
+  postTranslatedDecision(decision_translated:string) {
+    this.applicationToShow.decisionTranslated = decision_translated;
+    this.applicationToShow.status = "Oorkonde opmaken"
     this.DB.updateApplication(this.applicationID,this.applicationToShow)
-
       .subscribe(() => this.goBack());
   }
 
@@ -36,3 +36,4 @@ export class DecisionComponent implements OnInit {
   }
 
 }
+

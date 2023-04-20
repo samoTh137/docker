@@ -1,0 +1,20 @@
+<h1>Gebruiker toevoegen</h1>
+<div class="table-wrapper">
+<form (ngSubmit)="OnSubmit()">
+    <label for="email">E-mail:</label>
+    <input type="text" id="email" name="email" [(ngModel)]="newUser.email">
+    <p *ngIf="showErrorEmailMessage">Email is al in gebruik</p>
+    <br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="newUser.password"><br><br>
+    <label for="role">Rol:</label>
+    <select id="role" name="role" [(ngModel)]="newUser.role">
+      <option *ngFor="let role of roles.sort()" [value]="role">{{ role }}</option>
+    </select>
+    <button type="submit">Submit</button>
+</form>
+<a [routerLink]="['/user-managment']">Ga terug</a>
+</div>
+<p id="notComplete" *ngIf="showNotCompleteMessage">Vul alle gegevens in</p>
+<p id="created" *ngIf="showUserCreatedMessage">Gebruiker succesvol aangemaakt!</p>
+

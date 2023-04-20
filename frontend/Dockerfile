@@ -16,7 +16,11 @@ RUN npm install
 COPY . .
 
 # Build the app #
+<<<<<<< Updated upstream
 RUN ng build --prod
+=======
+RUN ng build --configuration production
+>>>>>>> Stashed changes
 
 
 # running the application

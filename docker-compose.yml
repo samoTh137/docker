@@ -12,7 +12,7 @@ services:
     build: ./db
     environment:
       - MYSQL_ROOT_PASSWORD=groep-8
-      - MYSQL_DATABASE=db_aanvragen
+      - MYSQL_DATABASE=db_badge_of_honour
       - MYSQL_USER=testuser
       - MYSQL_PASSWORD=testpwd
     ports:

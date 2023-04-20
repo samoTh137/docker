@@ -15,5 +15,6 @@ export interface Application {
     "tuchtStrafSancties":string,
     "status":string,
     "voorgesteldeEreteken":string,
-    "verslagBetrokkene":string
+    "verslagBetrokkene":string,
+    "oorkonde":string
 }

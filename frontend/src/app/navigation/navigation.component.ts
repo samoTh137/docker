@@ -20,4 +20,7 @@ export class NavigationComponent implements OnInit {
     localStorage.setItem('loggedIn', JSON.stringify(false));
 
   }
+  GetUserRole():string{
+    return this.service.GetRoleOfUser();
+  }
 }

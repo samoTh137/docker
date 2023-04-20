@@ -9,7 +9,8 @@
         <ul>
             <li class="li-login"><a routerLink="/login" (click)="RefreshSession()">Logout</a></li>
             <li class="li-overview"><a routerLink="/overview">Overview</a></li>
-            <li class="li-aanvraag"><a routerLink="/application">Nieuw ereteken aanvragen</a></li>
+            <li class="li-aanvraag"><a routerLink="/pre-application">Nieuw ereteken aanvragen</a></li>
+            <li class="li-usermanagment" *ngIf="GetUserRole() == 'Developer'" ><a routerLink="/user-managment">Gebruikersbeheer</a></li>
         </ul>
     </div>
     <div class="dashboard">

@@ -3,7 +3,8 @@ import { DbService } from '../db-service';
 import { Subject } from 'rxjs';
 import { Application } from '../application.model';
 import { ActivatedRoute } from '@angular/router';
-import { IAanvraag } from '../entities/Aanvraag';
+import { IApplication } from '../entities/Application';
+import { ICareer } from '../entities/Career';
 
 @Component({
   selector: 'app-view',
@@ -12,8 +13,9 @@ import { IAanvraag } from '../entities/Aanvraag';
 })
 
 export class ViewComponent implements OnInit, OnDestroy {
-  applications: IAanvraag[] = [];
-  applicationToShow!: IAanvraag;
+  applications: IApplication[] = [];
+  applicationToShow!: IApplication;
+  applicationLoopbaan: ICareer;
   destroy$: Subject<boolean> = new Subject<boolean>();
   applicationID:number = 0;
 
@@ -33,5 +35,9 @@ export class ViewComponent implements OnInit, OnDestroy {
     this.dbService.getApplication(this.applicationID).subscribe(data => {
       this.applicationToShow = data;
     });
+
+    this.dbService.getApplicationLoopbaan(this.applicationID).subscribe(data => {
+      this.applicationLoopbaan = data;
+    })
     }
   }
