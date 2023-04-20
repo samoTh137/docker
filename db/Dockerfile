@@ -2,7 +2,7 @@ FROM mysql:latest
 
 RUN chown -R mysql:root /var/lib/mysql/
 
-ARG MYSQL_DATABASE=db_aanvragen
+ARG MYSQL_DATABASE=db_badge_of_honour
 ARG MYSQL_USER=testuser
 ARG MYSQL_PASSWORD=testpwd
 ARG MYSQL_ROOT_PASSWORD=groep-8
